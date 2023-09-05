@@ -1,0 +1,31 @@
++ 3주
+- html tag 학습 : 
+  headings: h1 h2 h3 h4 h5 h6 
+  papagraphs: p 
+  links :  a
+  bookmark: id 속성
+- style을 나타내는 style속성, style태그의 방법: inline, internal, external
+- images:  img
+- image map generator: https://www.image-map.net/
+- link 태그 사용한 favicon 표시 : link
+- 페이지 title : title 
+- table 만들기:  table th tr td caption col colspan rowspan thead tbody tfoot
+- 목록나타내기: ol ul li, dl dt dd
+- iframe
+- semantics
+- audio 
+- video
+
++ 2주
+ - github 계정생성, 프로젝트 생성
+ - git clone, git pull, git push, git commit, git log  명령어 사용
+ - http프로토콜, tcp, ip 프로토콜
+ - osi 7계층, tcp/ip 4계층
+ - server 와 client 
+ - 세션, 쿠키
+
+
++ 1주
+ - 웹프로그램 개요, 역사, 표준
+ - 웹표준, 웹접근성
+ - visual studio code 를 사용한 개발환경 설치
