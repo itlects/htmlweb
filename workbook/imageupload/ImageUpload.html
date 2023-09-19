@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image UpLoad and display</title>
+
+
+    <style>
+        .profilecard{
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 200px;
+            float: left;
+            border-radius: 5px;
+        }
+        .profilecard:hover{
+            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
+        }
+        .profilecard img{
+            border-radius: 5px 5px 0 0;
+        }
+        .profilecard .container{
+            padding: 2px 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" name="imagefile" id="imagefile" onchange="loadFile(event)">
+    <section>
+        <article id="profile">
+            <div class="profilecard">
+                <p><img src="" alt="resumephoto" id="output" style="width: 100%;"></p>
+                <div class="container">
+                    <h4 style="padding: 0 10%;"><b>홍길서</b></h4>
+                    <ul style="font-size: small;">
+                        <li><p>모빌러티사업부</p>
+                        <li><p>IoT 소프트웨어개발</p>
+                    </ul>
+                </div>
+            </div
+        </article>
+    </section>
+</body>
+
+    <script>
+        var loadFile=function(event){
+            var image = document.getElementById("output");
+            image.src=URL.createObjectURL(event.target.files[0]);
+        };
+
+    </script>
+</html>

@@ -1,0 +1,21 @@
+ref:
+ https://www.youtube.com/watch?v=p1GmFCGuVjw
+ https://drive.google.com/file/d/12UwjFTg1oE6uToNpq2AYXwLIotkdNk-M/view
+ https://ionic.io/ionicons   icon사용
+
+ css가상요소
+  https://ordinary-code.tistory.com/141
+  가상 요소는 css를 통해서 가상의 element를 추가하는 코드이다.
+  이미 작성된 HTML에 새로운 스타일을 주기 위해서 가상 요소를 추가해서 사용을 할 수 있다.
+  :before는 HTML안 앞쪽에 추가하는 가상 요소이고
+  :after는 HTML이 끝날 때 추가되는 가상 요소이다.
+
+ transform scale rotate
+  https://www.biew.co.kr/entry/CSS3-Transform-속성-scale-rotate-translate-skew-실무예제-첨부파일-포함
+  https://www.codingfactory.net/12593 
+ invalid valid 
+  https://velog.io/@planic324/CSS-valid-invalid-란 
+  https://blog.naver.com/jaebum85/110187830794
+  https://www.w3schools.com/cssref/sel_valid.php
+ 가상요소(pseudo element) :after :before 
+  https://ordinary-code.tistory.com/141 

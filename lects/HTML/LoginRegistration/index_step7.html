@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website With Login & Registration | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        header{
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            padding:20px 5%;
+            background: rgba(255, 0, 0, 0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            z-index: 99;
+        }
+
+        .logo{
+            font-size: 2em;            
+            color: #fff;
+            user-select:none;
+        }
+
+        .navigation a{
+            position: relative;
+            font-size: 1.1em;
+            color:#fff;
+            width: 100%;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+
+        
+
+        .navigation .btnLogin-popup{
+            width: 130px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            outline:none ;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 0.5s;
+        }
+
+
+        .navigation .btnLogin-popup:hover{
+            background-color: #fff;
+            color: #162938;
+        }
+
+        .navigation a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: #fff; 
+            border-radius: 5px;  
+            transform: scaleX(0); 
+            transition: transform .5s;
+            transform-origin: right;
+        }
+        
+        .navigation a:hover::after{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <style>
+        .wrapper{
+            position: relative;
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+        }
+
+        .form-box h2{
+            font-size: 2em;
+            color:#162938;
+            text-align: center;
+        }
+
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid #162938;
+            margin: 30px 0;
+        }
+
+        .input-box label{
+            position:absolute;
+            top: 50%;
+            left:5px;
+            
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #162938;
+            font-weight: 500;
+            pointer-events: none;
+        }
+
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .input-box .icon{
+            position: absolute;
+            right: 8px;
+            font-size: 1.2em;
+            color: #162938;
+            line-height: 57px;
+        }
+    </style>
+
+    <style>
+        .input-box input:focus~label,
+        .input-box input:valid~label{
+            top: -5px;
+        }
+
+        .input-box label{
+            transition: 0.5s;
+        }
+
+        .input-box input{
+            padding: 0 35px 0 5px;
+        }
+
+        .remember-forgot{
+            font-size: 0.9em;
+            color: #162938;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .remember-forgot label input{
+            align-content: #162938;
+            margin-right: 3px;
+        }
+
+        .remember-forgot a{
+            color: #162938;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover{
+            text-decoration: underline;
+        }
+
+        .btn{
+            width: 100%;
+            height: 45px;
+            background-color: #162938;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 500;
+
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .login-register{
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #162938;
+            text-align: center;
+            margin: 25px 0 10px;
+            
+        }
+
+        .login-register p a{
+            color: #162938;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-register p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+
+    <style>
+        .wrapper .icon-close{
+            background-color: #162938;
+            color: #fff;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 45px;
+            width: 45px;
+            font-size: 2em;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .wrapper{
+            overflow: hidden;
+        }
+
+        .wrapper .icon-close{
+            border-bottom-left-radius: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+    </style>
+
+    <!-- registration -->
+    <style>
+        
+        .wrapper{
+            overflow:unset;
+        } 
+        
+        
+        .wrapper .form-box.login{
+            display:block;
+        }
+        
+    </style>
+
+    <style>
+        .wrapper .form-box.register{
+            position: absolute;
+            transform: translateX(400px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Logo</h2> 
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="icon-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for="remebercheck"><input type="checkbox" id="remebercheck">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?</p>
+                    <p><a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" name="username" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for="remebercheck"><input type="checkbox" id="remebercheck">Remember me</label>
+                    <a href="#">I gree to the tems & conditions</a>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?</p>
+                    <p><a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    const wrapper = document.querySelector('.wrapper');
+    const loginLink = document.querySelector('.login-link');
+    const registerLink = document.querySelector('.register-link');
+
+    /* F12디버거를 열로 register, login link클릭햇을 때 active 클래스 변경확인할것 */
+    registerLink.addEventListener('click', ()=>{
+        wrapper.classList.add('active');
+    });
+    loginLink.addEventListener('click', ()=>{
+        wrapper.classList.remove('active');
+    });
+
+</script>
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
