@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullscreen video background</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            
+        }
+        body{
+            display: flex;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        #myVideo{
+            position: fixed;
+            top:0;
+            align-items: center;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
+    <style>
+        .content{
+            position: fixed;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.4);
+            width: 100%;
+            padding: 20px;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: 500;
+        }
+    </style>
+    <style>
+        #myBtn{
+            width: 200px;
+            padding: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-transform: capitalize;
+            border: none;
+            cursor: pointer;
+        }
+        #myBtn:hover{
+            /* opacity: 0.6;*/
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgba(0, 0, 0, 1.0);
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+<body>
+    <video autoplay muted loop src="rain.mp4" id="myVideo" type="video/mp4">
+        your browser does not support html5 video tag
+    </video>
+    <div class="content">
+        <h1>Heading</h1>
+        <p>Whereas disregard and contempt for human rights have resulted</p>
+        <button id="myBtn" onclick="bgVideoPlay()">pause</button>
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function bgVideoPlay(){
+            if(video.paused){
+                video.play();
+                btn.innerHTML="Pause";
+            }
+            else{
+                video.paused();
+                btn.innerHTML="Play";
+            }
+        }
+    </script>
+</body>
+</html>
