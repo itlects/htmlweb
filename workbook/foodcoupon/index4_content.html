@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="##맛있는 햄벅거##" content="hambuger discount coupon">
+    <meta name="keywords" content="푸드 food 점심식사 간편 가까운 햄버거 hamburger">
+    <meta name="og:image" content="http://127.0.0.1:3000/workbook/foodcoupon/hamburger.jpg">
+    <title>food coupon design</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .coupon {
+            display: relative;
+            border: 5px dotted gainsboro;
+            border-radius: 15px;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .container {
+            background-color: #f1f1f1;
+            padding: 0px 16px;
+        }
+    </style>
+    <style>
+        .logo{
+            height: 55px;
+            display: flex; 
+            vertical-align:middle;
+        }
+        
+        .logo-icon{
+            text-align: center;
+        }
+        
+        .logo-icon > img{
+            width: auto;
+            height: 80%;
+
+            position: relative;
+            top: 50%;
+            left: 16px;
+            transform: translate(-50%, -50%);
+        }
+        
+        .logo-text{
+            color:blue;
+            text-align: left;
+            
+            font-weight: 600;
+        }
+        .item-image{
+            padding: 0px 0px;
+        }
+        .coupon-desc {
+            padding: 2px 16px;
+            background-color: white;
+        }
+        .coupon-code{
+            font-size: 1.2em;
+        }
+        .coupon-code .promo{
+            color: red;
+        }
+        .coupon-code .expire{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coupon">
+        <div class="logo container">
+            <div class="logo-icon">
+                <img src="logo-icon.png" alt="logo">
+            </div>
+            <div class="logo-text">
+                <p>야옹이 햄버거</p>
+            </div>
+        </div>
+        <div class="item-image container">
+            <img src="./hamburger.jpg" alt="hamburger order 1" style="width: 100%;">
+        </div>
+        <div class="coupon-desc container">
+            <h2>20% OFF SEASON SALE</h2>
+            <p>Lorem ipsum dolor sit amet, et nam pertinax gloriatur.
+                Sea te minim soleat senserit, ex quo luptatum tacimates voluptatum,
+                salutandi delicatissimi eam ea. In sed nullam laboramus appellantur,
+                mei ei omnis dolorem mnesarchum.
+            </p>
+        </div>
+        <div class="coupon-code container">
+            <p>Use Promo Code: <span class="promo">Y232</span></p>
+            <p class="expire">Expires: Jan 03, 2024</p>
+        </div>
+    </div>
+</body>
+
+</html>
