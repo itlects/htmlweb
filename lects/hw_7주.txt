@@ -1,0 +1,25 @@
+7주 CSS 반응형 레이아웃
+
+
+ncss를 적용해서 card를 만들어 보세요
+
+게시판 제출 제목은 "7주 CSS 반응형 레이아웃 grid 카드"으로 하세요
+​
+
+과제내용: 
+
+grid 레이아웃을 적용해서 5xauto-fit 으로 카드를 표시하는 웹페이지를 작성하세요
+화면이 1024이상이면 5개( 5xauto-fit )
+화면이 680이상이고 1024미만이면 4개 ( 4xauto-fit )
+화면이 680미만이면 1개로 ( 1xauto-fit ) 표시하세요
+ 
+(grid-gallery-result-col-row.html을 사용하세요)
+
+1. cardhover  명함카드를 만들어서 레이아웃에 넣으세요
+workbook/cardhover/index.html
+
+
+2.  foodcoupon, 쿠폰 카드를 만들어서 레이아웃에 넣으세요 
+workbook/foodcoupon/index.html
+
+​
