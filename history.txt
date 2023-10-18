@@ -1,3 +1,9 @@
++ 8주
+- js 기초 학습
+  var, let, const 설명
+  https://www.freecodecamp.org/korean/news/var-let-constyi-caijeomeun/
+  
+
 + 4주
 - css 기초 학습
 

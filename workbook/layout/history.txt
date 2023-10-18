@@ -1,0 +1,18 @@
+* refs layout pages 
+
+ 
+https://www.w3schools.com/html/html_layout.asp
+
+html layout float
+html layout flexbox
+
+display: table 
+ https://selosele.github.io/2020/01/09/table-property/
+
+::before, ::after, content
+ https://blog.hivelab.co.kr/공유before와after-그들의-정체는/
+
+
+display:table 
+ https://coding-factory.tistory.com/948
+ 
