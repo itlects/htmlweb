@@ -20,5 +20,19 @@
 		document.write(plots[i] + "<br>");
 	}
 </script>
+<br>
+<script>
+plots = [1, 2, 3, 4, 5];
+document.write("var plots = [" + plots.toString()+"]");
+for(let i=0; i<5; i++) {
+	document.write("<br>" + plots[i] );
+	let v = plots[i];
+	for(j=0;j<v;j++){
+		document.write("*");
+	}
+}
+</script>
+
+
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>new Object()로 사용자 객체 만들기</title>
+<title>new Object()로 사용자 (계좌) 객체 만들기</title>
 <script>
 	//메소드로 사용할 3 개의 함수 작성
 	function inquiry() { return this.balance; } // 잔금 조회
@@ -15,9 +15,9 @@
 	
 	// 사용자 객체 만들기
 	let account  = new Object(); 
-	account.owner = "황기태"; // 계좌 주인 프로퍼티 생성 및 초기화
-	account.code = "111"; // 코드 프로퍼티 생성 및 초기화
-	account.balance = 35000; // 잔액 프로퍼티 생성 및 초기화
+	account.owner = "홍길동"; // 계좌 주인 프로퍼티 생성 및 초기화
+	account.code = "123-213101231"; // 코드 프로퍼티 생성 및 초기화
+	account.balance = 100000; // 잔액 프로퍼티 생성 및 초기화
 	account.inquiry = inquiry; // 메소드 작성
 	account.deposit = deposit; // 메소드 작성
 	account.withdraw = withdraw; // 메소드 작성
