@@ -1,3 +1,6 @@
++ 11주
+  https://developer.mozilla.org/en-US/docs/Web/API/History_API
+  https://www.tutorialrepublic.com/javascript-tutorial/javascript-window-history.php
 + 10주
 + 9주
 + 8주
