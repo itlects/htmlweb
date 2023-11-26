@@ -1,3 +1,13 @@
 /ref
 /hw
 /test
+
+.gitignore
+/hw
+/openchallenge
+/exer
+/practice
+/textbook
+/webmaster
+/workbook.temp
+/webmaster.temp
